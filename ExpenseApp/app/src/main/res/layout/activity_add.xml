@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark"
+    android:padding="12sp"
+    tools:context="com.moutamid.expenseapp.AddActivity">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12sp"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/round_arrow_back_24"
+        app:tint="@color/white"
+        android:background="@drawable/round" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/back">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/amount"
+                android:layout_width="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/dark_blue"
+                android:layout_marginTop="20sp"
+                app:hintTextColor="@color/night"
+                app:boxStrokeColor="@color/night"
+                android:hint="Amount">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="numberDecimal"
+                    android:textColorHint="@color/night"
+                    android:fontFamily="@font/poppins"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                android:layout_height="wrap_content"
+                app:boxBackgroundColor="@color/dark_blue"
+                android:layout_marginTop="20sp"
+                app:hintTextColor="@color/night"
+                android:gravity="top"
+                app:boxStrokeColor="@color/night"
+                android:hint="Description">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="100sp"
+                    android:inputType="textMultiLine"
+                    android:gravity="top"
+                    android:textColorHint="@color/night"
+                    android:fontFamily="@font/poppins"/>
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/addIncome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:drawableLeft="@drawable/round_add"
+                android:drawableTint="@color/dark"
+                android:textStyle="bold"
+                android:padding="12sp"
+                android:layout_marginTop="15sp"
+                android:fontFamily="@font/poppins"
+                android:backgroundTint="@color/btn"
+                android:textColor="@color/dark"
+                android:text="Add Income" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>
